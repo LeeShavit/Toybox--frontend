@@ -1,0 +1,251 @@
+.birthday {
+    background-color: white;
+    height: 100vh;
+
+    h1 {
+        position: absolute;
+        left: 20%;
+        top: 20px;
+        max-width: 80%;
+    }
+
+    .blow {
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        background-color: #cf245f;
+        background-image: linear-gradient(to bottom right, #fcd34d, #ef4444, #ec4899);
+        border: 0;
+        border-radius: .25rem;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 1.125rem;
+        /* 18px */
+        font-weight: 600;
+        line-height: 1.75rem;
+        /* 28px */
+        padding: 1rem 1.25rem;
+        text-align: center;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    &:hover {
+        box-shadow: none;
+    }
+
+    @media (min-width: 1024px) {
+        .button-76 {
+            font-size: 1.5rem;
+            /* 24px */
+            padding: 1rem 1.5rem;
+            line-height: 2rem;
+            /* 32px */
+        }
+    }
+
+    .clear{
+        background: none;
+        font-size: 20px;
+        padding-block-start: 60px;
+        padding-inline-start: 60px;
+    }
+
+
+    .cake {
+        display: block;
+        width: 50%;
+        margin: auto;
+        padding-top: 100px;
+    }
+
+    .holder {
+        position: absolute;
+        transition: opacity .6s;
+
+        & *,
+        & *:before,
+        & *:after {
+            position: absolute;
+            content: "";
+        }
+
+
+        .candle {
+            bottom: 0;
+            width: 15px;
+            /* reduced from 150px */
+            height: 60px;
+            /* reduced from 300px */
+            border-radius: 15px / 4px;
+            /* reduced from 150px / 40px */
+            box-shadow: inset 2px -3px 5px 0 rgba(0, 0, 0, 0.4), inset -2px 0 5px 0 rgba(0, 0, 0, 0.4);
+            /* reduced from 20px -30px 50px */
+            background: blue;
+            background: linear-gradient(#e48825, #e78e0e 5%, $clr-candle 20%);
+
+            &:before {
+                width: 100%;
+                height: 4px;
+                /* reduced from 40px */
+                border-radius: 50%;
+                border: 0.2px solid #d47401;
+                /* reduced from 2px */
+                background: #b86409;
+                background: radial-gradient(#eaa121, #8e4901 45%, #b86409 80%);
+            }
+
+            &:after {
+                width: 3.4px;
+                /* reduced from 34px */
+                height: 1px;
+                /* reduced from 10px */
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 50%;
+                top: 1.4px;
+                /* reduced from 14px */
+                box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+                /* reduced from 20px */
+                background: radial-gradient(rgba(0, 0, 0, 0.6), transparent 45%);
+            }
+
+            .thread {
+                width: 0.6px;
+                height: 3.6px;
+                top: -1.7px;
+                left: 50%;
+                z-index: 1;
+                border-radius: 40% 40% 0 0;
+                transform: translateX(-50%);
+                background: #121212;
+
+            }
+
+            .flame {
+                width: 2.4px;
+                height: 12px;
+                left: 50%;
+                transform-origin: 50% 100%;
+                transform: translateX(-50%);
+                bottom: 100%;
+                border-radius: 50% 50% 20% 20%;
+                background: rgba(255, 255, 255, 1);
+                background: linear-gradient(white 80%, transparent);
+                animation: moveFlame 6s linear infinite, enlargeFlame 5s linear infinite;
+
+                &:before {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50% 50% 20% 20%;
+                    box-shadow: 0 0 1.5px 0 rgba(247, 93, 0, .4), 0 -0.6px 0.4px 0 rgba(247, 128, 0, .7);
+                    /* reduced from 15px and 6px 4px */
+                }
+            }
+
+
+            .glow {
+                width: 2.6px;
+                /* reduced from 26px */
+                height: 6px;
+                /* reduced from 60px */
+                border-radius: 50% 50% 35% 35%;
+                left: 50%;
+                top: -4.8px;
+                /* reduced from -48px */
+                transform: translateX(-50%);
+                background: rgba(0, 133, 255, .7);
+                box-shadow: 0 -4px 3px 0 #dc8a0c, 0 4px 5px 0 #dc8a0c, inset 0.3px 0 0.2px 0 rgba(0, 133, 255, .6), inset -0.3px 0 0.2px 0 rgba(0, 133, 255, .6);
+                /* reduced from 40px and 3px */
+
+                &:before {
+                    width: 70%;
+                    height: 60%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 0;
+                    border-radius: 50%;
+                    background: rgba(0, 0, 0, 0.35);
+                }
+            }
+
+
+            .blinking-glow {
+                width: 10px;
+                height: 18px;
+                left: 50%;
+                top: -30%;
+                transform: translateX(-50%);
+                border-radius: 50%;
+                background: #ff6000;
+                filter: blur(6px);
+                /* reduced from 60px */
+                animation: blinkIt .1s infinite;
+            }
+        }
+    }
+
+    &.off {
+
+        .holder {
+            .flame {
+                opacity: 0;
+            }
+
+            .flame:before {
+                opacity: 0;
+            }
+
+            .glow {
+                opacity: 0;
+            }
+
+            .glow:before {
+                opacity: 0;
+            }
+
+            .blinking-glow {
+                opacity: 0;
+                animation: none;
+            }
+        }
+    }
+
+
+    @keyframes moveFlame {
+
+        0%,
+        100% {
+            transform: translateX(-50%) rotate(-2deg);
+        }
+
+        50% {
+            transform: translateX(-50%) rotate(2deg);
+        }
+    }
+
+    @keyframes enlargeFlame {
+
+        0%,
+        100% {
+            height: 12px;
+            /* reduced from 120px */
+        }
+
+        50% {
+            height: 14px;
+            /* reduced from 140px */
+        }
+    }
+
+    @keyframes blinkIt {
+        50% {
+            opacity: .8;
+        }
+    }
+}

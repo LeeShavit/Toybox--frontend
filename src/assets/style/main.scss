@@ -1,0 +1,18 @@
+@import 'setup/vars';
+@import 'setup/typography';
+@import 'setup/mixins';
+@import 'setup/function';
+
+//base
+@import 'base/base.scss';
+@import 'base/helpers.scss';
+@import 'base/layout.scss';
+
+@import 'pages/home';
+@import 'pages/main-menu';
+@import 'pages/cake-index';
+
+@import 'cmps/app-header';
+@import 'cmps/app-footer';
+
+

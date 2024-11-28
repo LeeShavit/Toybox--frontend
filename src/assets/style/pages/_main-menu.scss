@@ -1,0 +1,25 @@
+.main-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    padding: 100px;
+
+    a {
+        max-width: 20vw;
+        text-align: center;
+        background-color: pink;
+        padding: 1rem;
+        border-radius: 15px;
+
+        img {
+            max-width: 10vw;
+            margin: auto;
+        }
+
+        h5{
+            margin-bottom: 0;
+        }
+
+
+    }
+
+}

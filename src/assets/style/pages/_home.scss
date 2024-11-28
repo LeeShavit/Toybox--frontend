@@ -1,0 +1,11 @@
+.home-main{
+    margin: auto;
+    text-align: center;
+    padding-block-start: 10%;
+
+    .links{
+        display: flex;
+        justify-content: space-around;
+        padding-block-start: 10%;
+    }
+}

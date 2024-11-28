@@ -1,0 +1,30 @@
+@mixin for-mobile-layout{
+    @media (max-width: $break-s){
+        @content;
+    }
+}
+
+@mixin for-s-layout{
+    @media (min-width: $break-s){
+        @content;
+    }
+}
+
+@mixin for-m-layout{
+    @media (min-width: $break-m){
+        @content;
+    }
+}
+@mixin for-l-layout{
+    @media (min-width: $break-l){
+        @content;
+    }
+}
+
+@mixin layoutGTC($max) {
+    grid-template-columns:
+      minmax($layout-padding, 1fr)
+      minmax(auto, $max)
+      minmax($layout-padding, 1fr);
+  }
+  
